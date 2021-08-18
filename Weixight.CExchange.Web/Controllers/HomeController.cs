@@ -17,7 +17,7 @@ namespace Weixight.CExchange.Web.Controllers
         {
             _logger = logger;
         }
-
+        //ok
         public IActionResult Index()
         {
             return View();
