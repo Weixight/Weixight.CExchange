@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Weixight.CExchange.Entity\Weixight.CExchange.Entity.csproj" />
+    <ProjectReference Include="..\Weixight.CExchange.Persistence\Weixight.CExchange.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>
