@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Weixight.CExchange.Entity.Model;
+using Weixight.CExchange.Service.Implementation;
+using Weixight.CExchange.Service.Interface;
 
 namespace Weixight.CExchange.Web
 {
@@ -26,6 +28,7 @@ namespace Weixight.CExchange.Web
         {
             services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
             services.AddControllersWithViews();
+            services.AddTransient<IEmail, EmailService>();
 
         }
 

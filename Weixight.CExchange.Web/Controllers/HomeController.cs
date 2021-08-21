@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Weixight.CExchange.Entity.Model;
 using Weixight.CExchange.Infrastructure.Implemetation;
 using Weixight.CExchange.Service.Implementation;
+using Weixight.CExchange.Service.Interface;
 using Weixight.CExchange.Web.Models;
 
 namespace Weixight.CExchange.Web.Controllers
@@ -15,8 +16,8 @@ namespace Weixight.CExchange.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private EmailService _emailService;
-        public HomeController(ILogger<HomeController> logger, EmailService emailService)
+        IEmail _emailService = null;
+        public HomeController(ILogger<HomeController> logger, IEmail emailService)
         {
             _logger = logger;
             _emailService = emailService;

@@ -15,15 +15,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weixight.CExchange.Api", "W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weixight.CExchange.Web", "Weixight.CExchange.Web\Weixight.CExchange.Web.csproj", "{A5E603DA-7CAE-46A6-A991-20B6B222EF6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weixight.CExchange.Service", "Weixight.CExchange.Service\Weixight.CExchange.Service.csproj", "{F01B0244-CC8C-460F-BE61-E14BD6F93140}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weixight.CExchange.Service", "Weixight.CExchange.Service\Weixight.CExchange.Service.csproj", "{F01B0244-CC8C-460F-BE61-E14BD6F93140}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weixight.CExchange.Mobile.Android", "Weixight.CExchange.Mobile\Weixight.CExchange.Mobile.Android\Weixight.CExchange.Mobile.Android.csproj", "{4F9B1977-7747-4996-8801-A5B64DDCF2FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weixight.CExchange.Mobile.iOS", "Weixight.CExchange.Mobile\Weixight.CExchange.Mobile.iOS\Weixight.CExchange.Mobile.iOS.csproj", "{4BD31537-45C4-4620-B4E9-4F68AF219127}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weixight.CExchange.Mobile", "Weixight.CExchange.Mobile\Weixight.CExchange.Mobile\Weixight.CExchange.Mobile.csproj", "{B88F05D1-237B-4760-9093-A72879497061}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weixight.CExchange.Mobile", "Weixight.CExchange.Mobile\Weixight.CExchange.Mobile\Weixight.CExchange.Mobile.csproj", "{B88F05D1-237B-4760-9093-A72879497061}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weixight.CExchange.Infrastructure", "Weixight.CExchange.Infrastructure\Weixight.CExchange.Infrastructure.csproj", "{62A93B8E-96A3-4F2F-A467-7750C6A94F66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weixight.CExchange.Infrastructure", "Weixight.CExchange.Infrastructure\Weixight.CExchange.Infrastructure.csproj", "{62A93B8E-96A3-4F2F-A467-7750C6A94F66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weixight.CExchange.Testing", "Weixight.CExchange.Testing\Weixight.CExchange.Testing.csproj", "{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -171,6 +173,18 @@ Global
 		{62A93B8E-96A3-4F2F-A467-7750C6A94F66}.Release|iPhone.Build.0 = Release|Any CPU
 		{62A93B8E-96A3-4F2F-A467-7750C6A94F66}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{62A93B8E-96A3-4F2F-A467-7750C6A94F66}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}.Release|iPhone.Build.0 = Release|Any CPU
+		{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
