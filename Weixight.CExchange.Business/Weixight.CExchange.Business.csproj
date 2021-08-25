@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Weixight.CExchange.Infrastructure\Weixight.CExchange.Infrastructure.csproj" />
     <ProjectReference Include="..\Weixight.CExchange.Service\Weixight.CExchange.Service.csproj" />
   </ItemGroup>
 

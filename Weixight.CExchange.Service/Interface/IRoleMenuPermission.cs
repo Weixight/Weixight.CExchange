@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Weixight.CExchange.Entity;
 
-namespace Weixight.CExchange.Infrastructure.Interface
+namespace Weixight.CExchange.Service.Interface
 {
     public  interface IRoleMenuPermission
     {

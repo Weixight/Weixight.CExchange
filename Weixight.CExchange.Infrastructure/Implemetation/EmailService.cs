@@ -49,7 +49,7 @@ namespace Weixight.CExchange.Service.Implementation
             }
             catch (Exception ex)
             {
-                //Log Exception Details
+                string Error = ex.Message.ToString();
                 return false;
             }
         }
@@ -98,9 +98,9 @@ namespace Weixight.CExchange.Service.Implementation
 
                 return true;
             }
-            catch (Exception ex)
+            catch 
             {
-                //Log Exception Details
+               
                 return false;
             }
         }
@@ -136,7 +136,7 @@ namespace Weixight.CExchange.Service.Implementation
 
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
                 //Log Exception Details
                 return false;

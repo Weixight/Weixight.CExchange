@@ -6,10 +6,13 @@ using Weixight.CExchange.Entity.ViewModels;
 
 namespace Weixight.CExchange.Service.Interface
 {
-    public  interface IRoleView
+    public  interface IRoleView 
     {
-        Task CreateAsync(RoleViewModel roleViewModel);
-       // RoleViewModel GetById(int id);  
-        IEnumerable<RoleViewModel> GetAll();
+        Task CreateAsync(string Name);
+        //UserViewModel GetById(string id);
+        //Task UpdateAsync(RoleViewModel userViewModel);
+        //Task UpdateAsync(string id);
+        //Task Delete(string id);
+       public  IEnumerable<RoleViewModel> GetAllAsync();
     }
 }

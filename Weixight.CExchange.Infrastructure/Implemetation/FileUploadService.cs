@@ -15,34 +15,17 @@ namespace Weixight.CExchange.Infrastructure.Implemetation
     class FileUploadService : IFileUploads
     {
         private readonly ApplicationDbContext _db;
-       public FileUploadService(ApplicationDbContext db)
+
+        public FileUploadService(ApplicationDbContext db)
         {
             _db = db;
         }
 
-        public async Task DeleteFileFromDatabase(int id)
+      
+
+        public bool DeleteFileFromFileSystem(FileOnFileSystemModel file)
         {
             {
-                        var file = await _db.FilesOnFileSystem.Where(x => x.Id == id).FirstOrDefaultAsync();
-                       if (file == null)
-                       {
-
-                       };
-                       if (System.IO.File.Exists(file.FilePath))
-                       {
-                           System.IO.File.Delete(file.FilePath);
-                       }
-                      _db.FilesOnFileSystem.Remove(file);
-                      _db.SaveChanges();
-                   }
-
-         }
-
-
-            public async Task<string> DeleteFileFromFileSystem(int id)
-        {
-            {
-                var file = await _db.FilesOnFileSystem.Where(x => x.Id == id).FirstOrDefaultAsync();
                 if (file == null)
                 {
 
@@ -51,26 +34,24 @@ namespace Weixight.CExchange.Infrastructure.Implemetation
                 {
                     System.IO.File.Delete(file.FilePath);
                 }
-                _db.FilesOnFileSystem.Remove(file);
-                _db.SaveChanges();
+                // _db.FilesOnFileSystem.Remove(file);
+                // _db.SaveChanges();
 
             }
-            return "";
+            return true;
         }
 
-        public async Task<(byte[] Data, string FileType, string)> DownloadFileFromDatabase(int id)
-          {
-              var file = await _db.FilesOnDatabase.Where(x => x.Id == id).FirstOrDefaultAsync();
-                 if (file == null) 
-               {
-                //return null;
-               }
-               return (file.Data, file.FileType, file.Name + file.Extension);
-         }
-
-        public async Task<(MemoryStream memory, string FileType, string)> DownloadFileFromFileSystem(int id)
+        public (byte[] Data, string FileType, string) DownloadFileFromDatabase(FileOnDatabaseModel file)
         {
-            var file = await _db.FilesOnFileSystem.Where(x => x.Id == id).FirstOrDefaultAsync();
+            if (file == null)
+            {
+                //return null;
+            }
+            return (file.Data, file.FileType, file.Name + file.Extension);
+        }
+
+        public (MemoryStream memory, string FileType, string) DownloadFileFromFileSystem(FileOnFileSystemModel file)
+        {
             if (file == null)
             {
             }
@@ -78,15 +59,16 @@ namespace Weixight.CExchange.Infrastructure.Implemetation
             var memory = new MemoryStream();
             using (var stream = new FileStream(file.FilePath, FileMode.Open))
             {
-                await stream.CopyToAsync(memory);
+                 stream.CopyToAsync(memory);
             }
             memory.Position = 0;
             return (memory, file.FileType, file.Name + file.Extension);
         }
 
 
-        public Task UploadToDatabase(List<IFormFile> files, string description)
+        public FileOnDatabaseModel UploadToDatabase(List<IFormFile> files, string description)
         {
+            FileOnDatabaseModel fileOnDatabaseModel = new FileOnDatabaseModel();
             foreach (var file in files)
             {
                 var fileName = Path.GetFileNameWithoutExtension(file.FileName);
@@ -101,18 +83,20 @@ namespace Weixight.CExchange.Infrastructure.Implemetation
                 };
                 using (var dataStream = new MemoryStream())
                 {
-                     file.CopyToAsync(dataStream);
+                    file.CopyToAsync(dataStream);
                     fileModel.Data = dataStream.ToArray();
                 }
-                _db.FilesOnDatabase.Add(fileModel);
-                _db.SaveChanges();
+                fileOnDatabaseModel = fileModel;
+                //  _db.FilesOnDatabase.Add(fileModel);
+                //   _db.SaveChanges();
             }
-           // TempData["Message"] = "File successfully uploaded to Database";
-            return null;
+            // TempData["Message"] = "File successfully uploaded to Database";
+            return fileOnDatabaseModel;
         }
 
-        public Task UploadToFileSystem(List<IFormFile> files, string description)
+        public FileOnFileSystemModel UploadToFileSystem(List<IFormFile> files, string description)
         {
+            FileOnFileSystemModel fileOnFileSystemModel = new FileOnFileSystemModel();
             foreach (var file in files)
             {
                 var basePath = Path.Combine(Directory.GetCurrentDirectory() + "\\Files\\");
@@ -125,7 +109,7 @@ namespace Weixight.CExchange.Infrastructure.Implemetation
                 {
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
-                         file.CopyToAsync(stream);
+                        file.CopyToAsync(stream);
                     }
                     var fileModel = new FileOnFileSystemModel
                     {
@@ -136,114 +120,24 @@ namespace Weixight.CExchange.Infrastructure.Implemetation
                         Description = description,
                         FilePath = filePath
                     };
-                    _db.FilesOnFileSystem.Add(fileModel);
-                    _db.SaveChanges();
+                    fileOnFileSystemModel = fileModel;
+                    //  _db.FilesOnFileSystem.Add(fileModel);
+                    // _db.SaveChanges();
                 }
             }
-           // TempData["Message"] = "File successfully uploaded to File System.";
-            return null;
+            // TempData["Message"] = "File successfully uploaded to File System.";
+            return fileOnFileSystemModel;
         }
+
+        
+
+      
+       
+
+      
     }
 
 
-        //    public async Task DeleteFileFromFileSystem(int id)
-        //    {
-        //        var file = await _db.FilesOnFileSystem.Where(x => x.Id == id).FirstOrDefaultAsync();
-        //        if (file == null)
-        //        {
-
-        //        };
-        //        if (System.IO.File.Exists(file.FilePath))
-        //        {
-        //            System.IO.File.Delete(file.FilePath);
-        //        }
-        //        _db.FilesOnFileSystem.Remove(file);
-        //        _db.SaveChanges();
-        //       // TempData["Message"] = $"Removed {file.Name + file.Extension} successfully from File System.";
-        //       // return RedirectToAction("Index");
-        //    }
-
-        //    public async Task<(byte[] Data, string FileType, string)> DownloadFileFromDatabase(int id)
-        //    {
-        //        var file = await _db.FilesOnDatabase.Where(x => x.Id == id).FirstOrDefaultAsync();
-        //        if (file == null) 
-        //        {
-        //        }
-        //        return (file.Data, file.FileType, file.Name + file.Extension);
-        //    }
-
-        //    public async Task<(MemoryStream memory, string FileType, string)> DownloadFileFromFileSystem(int id)
-        //    {
-        //        var file = await _db.FilesOnFileSystem.Where(x => x.Id == id).FirstOrDefaultAsync();
-        //        if (file == null)
-        //        {
-        //        }
-
-        //        var memory = new MemoryStream();
-        //        using (var stream = new FileStream(file.FilePath, FileMode.Open))
-        //        {
-        //            await stream.CopyToAsync(memory);
-        //        }
-        //        memory.Position = 0;
-        //        return (memory, file.FileType, file.Name + file.Extension);
-        //    }
-
-        //    public async Task UploadToDatabase(List<IFormFile> files, string description)
-        //    {
-        //        foreach (var file in files)
-        //        {
-        //            var fileName = Path.GetFileNameWithoutExtension(file.FileName);
-        //            var extension = Path.GetExtension(file.FileName);
-        //            var fileModel = new FileOnDatabaseModel
-        //            {
-        //                CreatedOn = DateTime.UtcNow,
-        //                FileType = file.ContentType,
-        //                Extension = extension,
-        //                Name = fileName,
-        //                Description = description
-        //            };
-        //            using (var dataStream = new MemoryStream())
-        //            {
-        //                await file.CopyToAsync(dataStream);
-        //                fileModel.Data = dataStream.ToArray();
-        //            }
-        //            _db.FilesOnDatabase.Add(fileModel);
-        //            _db.SaveChanges();
-        //        }
-        //       // TempData["Message"] = "File successfully uploaded to Database";
-        //        //return RedirectToAction("Index");
-        //    }
-
-        //    public async Task UploadToFileSystem(List<IFormFile> files, string description)
-        //    {
-        //        foreach (var file in files)
-        //        {
-        //            var basePath = Path.Combine(Directory.GetCurrentDirectory() + "\\Files\\");
-        //            bool basePathExists = System.IO.Directory.Exists(basePath);
-        //            if (!basePathExists) Directory.CreateDirectory(basePath);
-        //            var fileName = Path.GetFileNameWithoutExtension(file.FileName);
-        //            var filePath = Path.Combine(basePath, file.FileName);
-        //            var extension = Path.GetExtension(file.FileName);
-        //            if (!System.IO.File.Exists(filePath))
-        //            {
-        //                using (var stream = new FileStream(filePath, FileMode.Create))
-        //                {
-        //                    await file.CopyToAsync(stream);
-        //                }
-        //                var fileModel = new FileOnFileSystemModel
-        //                {
-        //                    CreatedOn = DateTime.UtcNow,
-        //                    FileType = file.ContentType,
-        //                    Extension = extension,
-        //                    Name = fileName,
-        //                    Description = description,
-        //                    FilePath = filePath
-        //                };
-        //                 _db.FilesOnFileSystem.Add(fileModel);
-        //                 _db.SaveChanges();
-        //            }
-        //        }
-        //       // TempData["Message"] = "File successfully uploaded to File System.";
-        //    }
+        
 }
 

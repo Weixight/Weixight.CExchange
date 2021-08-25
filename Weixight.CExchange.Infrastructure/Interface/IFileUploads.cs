@@ -4,16 +4,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using Weixight.CExchange.Entity.Model;
 
 namespace Weixight.CExchange.Infrastructure.Interface
 {
     public  interface IFileUploads
     {
-        Task  UploadToFileSystem(List<IFormFile> files, string description);
-        Task UploadToDatabase(List<IFormFile> files, string description);
-        Task<(byte[] Data, string FileType, string)> DownloadFileFromDatabase(int id);
-        Task<(MemoryStream memory, string FileType, string)> DownloadFileFromFileSystem(int id);
-        Task<string> DeleteFileFromFileSystem(int id);
-        Task DeleteFileFromDatabase(int id);
+        FileOnFileSystemModel UploadToFileSystem(List<IFormFile> files, string description);
+        FileOnDatabaseModel UploadToDatabase(List<IFormFile> files, string description);
+        (byte[] Data, string FileType, string) DownloadFileFromDatabase(FileOnDatabaseModel fileOnDatabaseModel);
+        (MemoryStream memory, string FileType, string) DownloadFileFromFileSystem(FileOnFileSystemModel fileOnFileSystemModel);
+        bool DeleteFileFromFileSystem(FileOnFileSystemModel fileOnFileSystemModel);
+        //Task<int> DeleteFileFromDatabase(int id);
     }
 }

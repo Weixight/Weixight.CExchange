@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="EFCore.BulkExtensions" Version="5.3.7" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Weixight.CExchange.Entity\Weixight.CExchange.Entity.csproj" />
     <ProjectReference Include="..\Weixight.CExchange.Persistence\Weixight.CExchange.Persistence.csproj" />
   </ItemGroup>

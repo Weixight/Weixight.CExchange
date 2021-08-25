@@ -19,8 +19,10 @@ namespace Weixight.CExchange.Persistence
         public DbSet<Cartegory> Cartegories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<state> State { get; set; }
+        public DbSet<EmployeeTbl> EmployeeTbls { get; set; }
         public DbSet<FileOnDatabaseModel> FilesOnDatabase { get; set; }
         public DbSet<FileOnFileSystemModel> FilesOnFileSystem { get; set; }
+        public DbSet<NavigationMenu> AspNetNavigationMenu { get; set; }
 
     }
 }

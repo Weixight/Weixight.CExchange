@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weixight.CExchange.Mobile",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weixight.CExchange.Infrastructure", "Weixight.CExchange.Infrastructure\Weixight.CExchange.Infrastructure.csproj", "{62A93B8E-96A3-4F2F-A467-7750C6A94F66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weixight.CExchange.Testing", "Weixight.CExchange.Testing\Weixight.CExchange.Testing.csproj", "{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weixight.CExchange.Testing", "Weixight.CExchange.Testing\Weixight.CExchange.Testing.csproj", "{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weixight.CExchange.Payroll", "Weixight.CExchange.Payroll\Weixight.CExchange.Payroll.csproj", "{F2991168-84AD-470E-AE8E-FFB5DCFA4B92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -185,6 +187,18 @@ Global
 		{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}.Release|iPhone.Build.0 = Release|Any CPU
 		{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{D6D1C2BF-A030-4497-B44B-3A217FE97AA3}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{F2991168-84AD-470E-AE8E-FFB5DCFA4B92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2991168-84AD-470E-AE8E-FFB5DCFA4B92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2991168-84AD-470E-AE8E-FFB5DCFA4B92}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{F2991168-84AD-470E-AE8E-FFB5DCFA4B92}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{F2991168-84AD-470E-AE8E-FFB5DCFA4B92}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{F2991168-84AD-470E-AE8E-FFB5DCFA4B92}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{F2991168-84AD-470E-AE8E-FFB5DCFA4B92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2991168-84AD-470E-AE8E-FFB5DCFA4B92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2991168-84AD-470E-AE8E-FFB5DCFA4B92}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{F2991168-84AD-470E-AE8E-FFB5DCFA4B92}.Release|iPhone.Build.0 = Release|Any CPU
+		{F2991168-84AD-470E-AE8E-FFB5DCFA4B92}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{F2991168-84AD-470E-AE8E-FFB5DCFA4B92}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

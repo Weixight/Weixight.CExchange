@@ -13,23 +13,23 @@ namespace Weixight.CExchange.Entity
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public Guid Id { get; set; }
 
-		public string? Name { get; set; }
+        public string Name { get; set; }
 
 		[ForeignKey("ParentNavigationMenu")]
 		public Guid? ParentMenuId { get; set; }
 
 		public virtual NavigationMenu ParentNavigationMenu { get; set; }
 
-		public string? Area { get; set; }
-		public string? Klass { get; set; }
+		public string Area { get; set; }
+		public string Klass { get; set; }
 
-		public string? ControllerName { get; set; }
+		public string ControllerName { get; set; }
 
-		public string? ActionName { get; set; }
+		public string ActionName { get; set; }
 		public int? ServiceCode { get; set; }
 		public bool IsExternal { get; set; }
 
-		public string? ExternalUrl { get; set; }
+		public string ExternalUrl { get; set; }
 
 		public Nullable<int> DisplayOrder { get; set; }
 

@@ -6,11 +6,13 @@
 
   <ItemGroup>
     <PackageReference Include="MailKit" Version="2.15.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.9" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Weixight.CExchange.Entity\Weixight.CExchange.Entity.csproj" />
     <ProjectReference Include="..\Weixight.CExchange.Persistence\Weixight.CExchange.Persistence.csproj" />
+    <ProjectReference Include="..\Weixight.CExchange.Service\Weixight.CExchange.Service.csproj" />
   </ItemGroup>
 
 </Project>
