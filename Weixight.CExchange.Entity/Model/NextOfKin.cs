@@ -18,6 +18,8 @@ namespace Weixight.CExchange.Entity.Model
         public string Address { get; set; }
         public string Lga { get; set; }
         public string State { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Updated { get; set; }
         public string Relationship { get; set; }
         [Display(Name = "Cartegory")]
         public virtual int Epid { get; set; }

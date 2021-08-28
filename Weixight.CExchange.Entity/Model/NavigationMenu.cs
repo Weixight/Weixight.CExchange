@@ -32,6 +32,10 @@ namespace Weixight.CExchange.Entity
 		public string ExternalUrl { get; set; }
 
 		public Nullable<int> DisplayOrder { get; set; }
+		public DateTime Created { get; set; }
+		public DateTime Updated { get; set; }
+		public DateTime Created { get; set; }
+		public DateTime Updated { get; set; }
 
 		[NotMapped]
 		public bool Permitted { get; set; }

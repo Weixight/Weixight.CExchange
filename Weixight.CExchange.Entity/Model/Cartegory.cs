@@ -19,5 +19,7 @@ namespace Weixight.CExchange.Entity.Model
         [Display(Name = "Meta Date")]
 
         public string MetaData { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Updated { get; set; }
     }
 }

@@ -21,6 +21,8 @@ namespace Weixight.CExchange.Entity.Model
         public string LGA { get; set; }
         public string Gender { get; set; }
         public string MaritalStatus { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Updated { get; set; }
         public virtual int Epid { get; set; }
         [ForeignKey("id")]
         public virtual EmployeeTbl EmployeeTbl { get; set; }

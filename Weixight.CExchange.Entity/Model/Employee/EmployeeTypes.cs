@@ -13,6 +13,8 @@ namespace Weixight.CExchange.Entity.Model
         public int EmpTypeId { get; set; }
         public string EmployeeType { get; set; }
         public string DSC { get; set; }
-       
+        public DateTime Created { get; set; }
+        public DateTime Updated { get; set; }
+
     }
 }

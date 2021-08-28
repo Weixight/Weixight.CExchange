@@ -23,7 +23,9 @@ namespace Weixight.CExchange.Entity.Model
         public string LGA { get; set; }
         public string Origin_State { get; set; }
         public string Origing_Lga { get; set; }
-        public byte[] PassPort { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Updated { get; set; }
+        public bool Lock { get; set; }
         public virtual int EmpTypeId { get; set; }
         [ForeignKey("id")]
         public virtual EmployeeTypes EmployeeTypes { get; set; }

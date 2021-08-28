@@ -25,6 +25,8 @@ namespace Weixight.CExchange.Entity.Model
 
         public string Phone { get; set; }
         public string RegistrantEmail { get; set; }
-        
+        public DateTime Created { get; set; }
+        public DateTime Updated { get; set; }
+
     }
 }

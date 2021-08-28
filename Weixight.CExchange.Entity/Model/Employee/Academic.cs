@@ -17,5 +17,6 @@ namespace Weixight.CExchange.Entity.Model
         public string DeGrade { get; set; }
         public string EmpEmail { get; set; }
         public bool HrVerification { get; set; }
+        public bool Lock { get; set; }
     }
 }

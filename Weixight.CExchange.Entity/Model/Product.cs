@@ -41,6 +41,8 @@ namespace Weixight.CExchange.Entity.Model
 
         [Display(Name = "Owner")]
         public virtual string Email { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Updated { get; set; }
         [ForeignKey("id")]
         public virtual ApplicationUser ApplicationUser { get; set; }
     }
