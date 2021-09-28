@@ -18,5 +18,7 @@ namespace Weixight.CExchange.Entity.Model
         public string EmpEmail { get; set; }
         public bool HrVerification { get; set; }
         public bool Lock { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Updated { get; set; }
     }
 }

@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Model\NewFolder\" />
+    <Folder Include="Model\GenericModel\" />
   </ItemGroup>
 
 </Project>

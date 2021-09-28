@@ -34,17 +34,12 @@ namespace Weixight.CExchange.Entity
 		public Nullable<int> DisplayOrder { get; set; }
 		public DateTime Created { get; set; }
 		public DateTime Updated { get; set; }
-		public DateTime Created { get; set; }
-		public DateTime Updated { get; set; }
+		
 
 		[NotMapped]
 		public bool Permitted { get; set; }
 
 		public bool Visible { get; set; }
-		public bool Create { get; set; }
-		public bool Delete { get; set; }
-		public bool Update { get; set; } 
-		public bool Read { get; set; }
-		public bool Table { get; set; }
+		
 	}
 }
