@@ -1,0 +1,49 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@using Microsoft.AspNetCore.Mvc;
+@model List<Weixight.CExchange.AgricGator.Models.NewsItems>
+@using Weixight.CExchange.AgricGator.IntegratedModules;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+
+    <ul>
+        @foreach (var item in Model)
+        {
+        <li>
+            <div class="latest-research-img">
+                <a href="#">
+
+                    @if (item.Picture != null)
+                    {
+                        {
+
+                            var base64 = Convert.ToBase64String(item.Picture);
+                            var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                            @*<img src="~/img/news/13.jpg" class="img-responsive" alt="research">*@
+
+                            <img src="@imgsrc" class="img-responsive" alt="news" style="width:150px; height:101px;">
+                        }
+
+                    }
+                    else
+                    {
+
+                        <img src="~/img/news/8.jpg" class="img-responsive" alt="research">
+
+                    }
+                </a>
+            </div>
+            <div class="latest-research-content">
+                <h4>@item.PostedDate.Day @item.PostedDate.ToString("MMM"), @item.PostedDate.Year.ToString()</h4>
+                <p>@item.Tittle</p>
+            </div>
+        </li>
+        }
+
+    </ul>
+
+
+

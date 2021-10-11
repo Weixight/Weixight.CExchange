@@ -1,4 +1,6 @@
-﻿<div class="slider1-area overlay-default">
+﻿@model Weixight.CExchange.Web.Models.PagedResult<Registration>
+
+<div class="slider1-area overlay-default">
     <div class="bend niceties preview-1">
         <div id="ensign-nivoslider-3" class="slides">
             <img src="img/slider/ValueChain1.png" alt="slider" title="#slider-direction-1" />
@@ -427,119 +429,119 @@
 <!-- Publications Area End Here -->
 <!-- Students Join 2 Area Start Here -->
 @*<div class="students-join1-area">
-    <div class="container">
-        <div class="students-join1-wrapper">
-            <div class="students-join1-left">
-                <div id="ri-grid" class="author-banner-bg ri-grid header text-center">
-                    <ul class="ri-grid-list">
-                        <li>
-                            <a href="#"><img src="/img/students/student1.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student2.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student3.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student4.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student5.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student6.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student7.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student8.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student1.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student2.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student3.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student4.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student5.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student6.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student7.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student8.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student1.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student2.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student3.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student4.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student5.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student6.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student7.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student8.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student1.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student2.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student3.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student4.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student5.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student6.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student7.jpg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/img/students/student8.jpg" alt=""></a>
-                        </li>
-                    </ul>
+        <div class="container">
+            <div class="students-join1-wrapper">
+                <div class="students-join1-left">
+                    <div id="ri-grid" class="author-banner-bg ri-grid header text-center">
+                        <ul class="ri-grid-list">
+                            <li>
+                                <a href="#"><img src="/img/students/student1.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student2.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student3.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student4.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student5.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student6.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student7.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student8.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student1.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student2.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student3.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student4.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student5.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student6.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student7.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student8.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student1.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student2.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student3.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student4.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student5.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student6.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student7.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student8.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student1.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student2.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student3.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student4.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student5.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student6.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student7.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/students/student8.jpg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="students-join1-right">
-                <div>
-                    <h2>Join<span> 29,12,093</span> Students.</h2>
-                    <a href="#" class="join-now-btn">Join Now</a>
+                <div class="students-join1-right">
+                    <div>
+                        <h2>Join<span> 29,12,093</span> Students.</h2>
+                        <a href="#" class="join-now-btn">Join Now</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>*@
+    </div>*@
 <!-- Students Join 2 Area End Here -->
 <!-- Brand Area Start Here -->
 <div class="brand-area">
@@ -571,5 +573,7 @@
             </div>
         </div>
     </div>
+    @(await Component.InvokeAsync<PagerViewComponent>(Model))
+
 </div>
 <!-- Brand Area End Here -->

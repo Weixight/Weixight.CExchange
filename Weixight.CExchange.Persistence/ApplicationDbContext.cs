@@ -15,10 +15,11 @@ namespace Weixight.CExchange.Persistence
             : base(options)
         {
         }
+        public DbSet<Cartegory> Categories { get; set; }
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)  
         //{  
-              
+
         //    var typesToRegister = Assembly.GetExecutingAssembly().GetTypes()  
         //    .Where(type => !String.IsNullOrEmpty(type.Namespace))  
         //    .Where(type => type.BaseType != null && type.BaseType.IsGenericType && type.BaseType.GetGenericTypeDefinition() == typeof(EntityTypeConfiguration<>));

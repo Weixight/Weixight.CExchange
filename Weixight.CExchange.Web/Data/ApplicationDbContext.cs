@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+//using Weixight.CExchange.Entity.Model;
 
 namespace Weixight.CExchange.Web.Data
 {
@@ -12,5 +13,6 @@ namespace Weixight.CExchange.Web.Data
             : base(options)
         {
         }
+       // public DbSet<Cartegory> Categories { get; set; }
     }
 }

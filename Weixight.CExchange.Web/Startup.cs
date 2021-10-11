@@ -32,6 +32,14 @@ namespace Weixight.CExchange.Web
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            //services.AddIdentity<IdentityUser, IdentityRole>(opt =>
+            //{
+            //    opt.Password.RequiredLength = 7;
+            //    opt.Password.RequireDigit = false;
+            //    opt.Password.RequireUppercase = false;
+            //    opt.User.RequireUniqueEmail = true;
+            //});
+           //.AddEntityFrameworkStores<ApplicationContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
@@ -57,6 +65,7 @@ namespace Weixight.CExchange.Web
 
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseDatabaseErrorPage();
 
             app.UseEndpoints(endpoints =>
             {

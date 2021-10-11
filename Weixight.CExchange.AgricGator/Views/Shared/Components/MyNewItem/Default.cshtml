@@ -1,0 +1,56 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@using Microsoft.AspNetCore.Mvc;
+@model List<Weixight.CExchange.AgricGator.Models.NewsItems>
+@using Weixight.CExchange.AgricGator.IntegratedModules;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+<ul class="news-wrapper">
+    @foreach (var item in Model)
+    {
+
+        <li>
+            <div class="news-img-holder">
+                <a href="#">
+                    @if (item.Picture != null)
+                    {
+                        {
+
+                            var base64 = Convert.ToBase64String(item.Picture);
+                            var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                            <img src="@imgsrc" class="img-responsive" alt="news" style="width:150px; height:101px;">
+                        }
+
+                    }
+                    else
+                    {
+
+                        <img src="img/news/1.jpg" class="img-responsive" alt="news">
+
+
+                    }
+                </a>
+            </div>
+            <div class="news-content-holder">
+                <h3><a asp-controller="NewsItems" asp-action="Details" asp-route-id="@item.id">@item.Tittle .....</a></h3>
+                <div class="post-date">@item.PostedDate</div>
+                <p>
+                    @{ 
+                        FixedChar fixedChar = new FixedChar();
+                        var Mystring = fixedChar.HomePageString(item.Details);
+                    }
+                    @Mystring
+                   // Pellentese turpis dignissim amet area ducation process facilitating Knowledge.
+                </p>
+            </div>
+        </li>
+    }
+
+</ul>
+
+<div class="news-btn-holder">
+    <a href="#" class="view-all-accent-btn">View All</a>
+</div>

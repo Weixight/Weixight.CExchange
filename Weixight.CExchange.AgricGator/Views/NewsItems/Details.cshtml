@@ -1,0 +1,152 @@
+﻿@model Weixight.CExchange.AgricGator.Models.NewsItems
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="inner-page-banner-area" style="background-image: url('img/banner/5.jpg');">
+    <div class="container">
+        <div class="pagination-area">
+            <h1>News Details</h1>
+            <ul>
+                <li><a href="#">Home</a> -</li>
+                <li>Details</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="news-details-page-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12">
+                <div class="row news-details-page-inner">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="news-img-holder">
+
+                            @if (Model.Picture != null)
+                            {
+                                {
+
+                                    var base64 = Convert.ToBase64String(Model.Picture);
+                                    var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                                    <img src="~/img/news/13.jpg" class="img-responsive" alt="research">
+
+                                    @*<img src="@imgsrc" class="img-responsive" alt="news" style="width:150px; height:101px;">*@
+                                }
+
+                            }
+                            else
+                            {
+
+                                <img src="~/img/news/13.jpg" class="img-responsive" alt="research">
+
+                            }
+
+
+                            <ul class="news-date1">
+                                <li>@Model.PostedDate.Day @Model.PostedDate.ToString("MMM")</li>
+                                <li>@Model.PostedDate.Year.ToString()</li>
+                            </ul>
+                        </div>
+                        <h2 class="title-default-left-bold-lowhight"><a href="#">@Model.Tittle?</a></h2>
+                        @*<ul class="title-bar-high news-comments">
+                            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span>By</span> Admin</a></li>
+                            <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>Business</a></li>
+                            <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i><span>(03)</span> Comments</a></li>
+                        </ul>*@
+                        @Model.Details
+                        
+                        <ul class="news-social">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        </ul>
+                        <div class="course-details-comments">
+                            <h3 class="sidebar-title">(4) Comments</h3>
+                            <div class="media">
+                                <a href="#" class="pull-left">
+                                    <img alt="Comments" src="~/img/course/16.jpg" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <h3><a href="#">Greg Christman</a></h3>
+                                    <h4>Excellent course!</h4>
+                                    <p>Rimply dummy text of the printinwhen an unknown printer took eype and scramb relofeletogimply dummy and typesetting industry.</p>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a href="#" class="pull-left">
+                                    <img alt="Comments" src="~/img/course/17.jpg" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <h3><a href="#">Lora Ekram</a></h3>
+                                    <h4>Excellent course!</h4>
+                                    <p>Rimply dummy text of the printinwhen an unknown printer took eype and scramb relofeletogimply dummy and typesetting industry.</p>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a href="#" class="pull-left">
+                                    <img alt="Comments" src="~/img/course/18.jpg" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <h3><a href="#">Mike Jones</a></h3>
+                                    <h4>Excellent course!</h4>
+                                    <p>Rimply dummy text of the printinwhen an unknown printer took eype and scramb relofeletogimply dummy and typesetting industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leave-comments">
+                            <h3 class="sidebar-title">Leave A Comment</h3>
+                            <div class="contact-form">
+                                <form>
+                                    <fieldset>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <input type="text" placeholder="Name" class="form-control">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <input type="email" placeholder="Email" class="form-control">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <input type="text" placeholder="Website" class="form-control">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <textarea placeholder="Comment" class="textarea form-control" id="form-message" rows="8" cols="20"></textarea>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group margin-bottom-none">
+                                                    <button type="submit" class="view-all-accent-btn">Post Comment</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+                @await Component.InvokeAsync("NewsSideBar")
+               
+            </div>
+        </div>
+    </div>
+</div>

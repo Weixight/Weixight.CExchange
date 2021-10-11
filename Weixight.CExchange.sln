@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weixight.CExchange.Payroll"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weixight.CEchange.BlockChain", "Weixight.CEchange.BlockChain\Weixight.CEchange.BlockChain.csproj", "{7A2F9034-BA42-4DE5-B051-6631EB0B67CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weixight.CExchange.Web", "Weixight.CExchange.Web\Weixight.CExchange.Web.csproj", "{1EBCE83A-A2EF-476C-A9F5-2B09FA86F3C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weixight.CExchange.Web", "Weixight.CExchange.Web\Weixight.CExchange.Web.csproj", "{1EBCE83A-A2EF-476C-A9F5-2B09FA86F3C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weixight.CExchange.AgricGator", "Weixight.CExchange.AgricGator\Weixight.CExchange.AgricGator.csproj", "{6C70DA47-1DD7-49BF-A1D0-E78C79E3EB61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -213,6 +215,18 @@ Global
 		{1EBCE83A-A2EF-476C-A9F5-2B09FA86F3C3}.Release|iPhone.Build.0 = Release|Any CPU
 		{1EBCE83A-A2EF-476C-A9F5-2B09FA86F3C3}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{1EBCE83A-A2EF-476C-A9F5-2B09FA86F3C3}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{6C70DA47-1DD7-49BF-A1D0-E78C79E3EB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C70DA47-1DD7-49BF-A1D0-E78C79E3EB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C70DA47-1DD7-49BF-A1D0-E78C79E3EB61}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{6C70DA47-1DD7-49BF-A1D0-E78C79E3EB61}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{6C70DA47-1DD7-49BF-A1D0-E78C79E3EB61}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{6C70DA47-1DD7-49BF-A1D0-E78C79E3EB61}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{6C70DA47-1DD7-49BF-A1D0-E78C79E3EB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C70DA47-1DD7-49BF-A1D0-E78C79E3EB61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C70DA47-1DD7-49BF-A1D0-E78C79E3EB61}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{6C70DA47-1DD7-49BF-A1D0-E78C79E3EB61}.Release|iPhone.Build.0 = Release|Any CPU
+		{6C70DA47-1DD7-49BF-A1D0-E78C79E3EB61}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{6C70DA47-1DD7-49BF-A1D0-E78C79E3EB61}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

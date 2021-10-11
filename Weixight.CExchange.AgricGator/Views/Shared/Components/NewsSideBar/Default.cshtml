@@ -1,0 +1,48 @@
+﻿<div class="sidebar">
+        <div class="sidebar-box">
+            <div class="sidebar-box-inner">
+                <h3 class="sidebar-title">Search</h3>
+                <div class="sidebar-find-course">
+                    <form id="checkout-form">
+                        <div class="form-group course-name">
+                            <input id="first-name" placeholder="Type Here . . .." class="form-control" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <button class="sidebar-search-btn-full disabled" type="submit" value="Login">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-box">
+            <div class="sidebar-box-inner">
+                <h3 class="sidebar-title">Project List</h3>
+                @await Component.InvokeAsync("FarmProject")
+
+            </div>
+        </div>
+        <div class="sidebar-box">
+            <div class="sidebar-box-inner">
+                <h3 class="sidebar-title">Latest Posts</h3>
+                <div class="sidebar-latest-research-area">
+                    @await Component.InvokeAsync("ListOfNewUpdat")
+
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-box">
+            <div class="sidebar-box-inner">
+                <h3 class="sidebar-title">Post Harvest Processing</h3>
+                <ul class="product-tags">
+                    <li><a href="#">Cassava Processing</a></li>
+                    <li><a href="#">Maize Processing</a></li>
+                    <li><a href="#">Egg Powder Production</a></li>
+                    <li><a href="#">Egg Liquid Production</a></li>
+                    <li><a href="#">Poultry Feeds Production</a></li>
+                    <li><a href="#">Integrated Processing Plants</a></li>
+                    <li><a href="#">Date</a></li>
+                    <li><a href="#">Campus</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>

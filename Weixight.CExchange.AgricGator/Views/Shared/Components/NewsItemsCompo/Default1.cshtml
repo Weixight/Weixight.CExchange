@@ -1,0 +1,46 @@
+﻿@using Microsoft.AspNetCore.Http
+@using System.Text;
+@using Microsoft.AspNetCore.Mvc;
+@model List<Weixight.CExchange.AgricGator.Models.NewsItems>
+
+
+
+    <ul class="news-wrapper">
+        @foreach (var item in Model)
+        {
+        <li>
+            <div class="news-img-holder">
+                <a href="#"><img src="img/news/1.jpg" class="img-responsive" alt="news"></a>
+            </div>
+            <div class="news-content-holder">
+                <h3><a href="single-news.html">@item.Tittle .....</a></h3>
+                <div class="post-date">@item.PostedDate</div>
+                <p>Pellentese turpis dignissim amet area ducation process facilitating Knowledge.</p>
+            </div>
+        </li>
+        }
+        <li>
+            <div class="news-img-holder">
+                <a href="#"><img src="img/news/2.jpg" class="img-responsive" alt="news"></a>
+            </div>
+            <div class="news-content-holder">
+                <h3><a href="single-news.html">Cadbury became Our off taker for Cocoa</a></h3>
+                <div class="post-date">June 15, 2017</div>
+                <p>Pellentese turpis dignissim amet area ducation process facilitating Knowledge.</p>
+            </div>
+        </li>
+        <li>
+            <div class="news-img-holder">
+                <a href="#"><img src="img/news/3.jpg" class="img-responsive" alt="news"></a>
+            </div>
+            <div class="news-content-holder">
+                <h3><a href="single-news.html">Federal Goverment to Partner Agricgator</a></h3>
+                <div class="post-date">June 15, 2017</div>
+                <p>Pellentese turpis dignissim amet area ducation process facilitating Knowledge.</p>
+            </div>
+        </li>
+    </ul>
+
+    <div class="news-btn-holder">
+        <a href="#" class="view-all-accent-btn">View All</a>
+    </div>
